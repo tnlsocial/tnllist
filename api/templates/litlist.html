@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="noindex" name="robots"/>
+<meta content="noindex" name="googlebot"/>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap" rel="stylesheet"/>
+<style>
+pre {
+    white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */
+    width: 500px;
+}
+
+h1 {
+   font-family: 'Dancing Script', cursive;
+   font-size: 100px;
+}
+a { 
+    white-space: nowrap; 
+    color: black;
+    }
+</style>
+</head>
+<body>
+<h1>de litlist</h1>
+{% for item in litlist %}
+<pre><a href="#{{ item.id }}" id="{{ item.id }}">{{ item.id }}.</a> {{ item.content }}</pre>
+<p></p>
+{% endfor %}
+</body>
+</html>
